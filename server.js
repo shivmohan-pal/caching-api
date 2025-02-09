@@ -10,6 +10,11 @@ app.use(Cors());
 app.use(Express.urlencoded({ extended: false }));
 app.use(Express.json());
 
+app.get("/",(req,res)=>{
+ res.send("hello this is Cactro caching api 902 assignment");
+});
+
+
 //Create
 app.post("/cache", CheckLimit, (req, res, next) => {
   const obj = req.body;
